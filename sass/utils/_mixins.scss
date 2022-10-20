@@ -9,3 +9,23 @@
         @content
     }
 };
+
+@mixin font-title {
+    font-family: Shrikhand;
+}
+@mixin font-location {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+@mixin header-properties {
+    display: flex;
+    width: 100%;
+}
+@mixin logo-header {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    width: 40%;
+    height: auto;
+}
