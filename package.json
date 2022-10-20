@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Openclassrooms project",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,6 @@
     "postcss": "^8.4.18",
     "postcss-cli": "^10.0.0",
     "sass": "^1.55.0"
-  }
+  },
+  "browserslist": "last 4 versions"
 }
