@@ -1,6 +1,15 @@
 .header {
+    &__container--home {
+        width: 100%;
+        background: $color-grey-primary;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
+    }
     &--home {
+        z-index: 1;
         @include header-properties;
+        box-shadow: 0 0 5px 2px darken($color-grey-primary, 15%);
     }
     &__logo--home {
         margin-left: auto;
