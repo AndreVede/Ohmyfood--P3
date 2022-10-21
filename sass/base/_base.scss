@@ -4,9 +4,24 @@ body {
 }
 .header {
     @include header-properties;
+    flex-direction: row;
+    color: $color-grey-dark;
+    
+    &__icon-back {
+        z-index: 1;
+        font-size: large;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        position: absolute;
+        color: $color-grey-dark;
+        text-decoration: none;
+
+        left: 7%;
+        top: 3%;
+    }
     &__logo {
-        margin-left: auto;
-        margin-right: auto;
+        z-index: 2;
         @include logo-header;
     }
 }

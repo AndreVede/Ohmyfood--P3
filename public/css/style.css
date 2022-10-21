@@ -9,12 +9,26 @@ body {
   display: flex;
   width: 100%;
   background: white;
+  flex-direction: row;
+  color: #353535;
+}
+.header__icon-back {
+  z-index: 1;
+  font-size: large;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  color: #353535;
+  text-decoration: none;
+  left: 7%;
+  top: 3%;
 }
 .header__logo {
-  margin-left: auto;
-  margin-right: auto;
+  z-index: 2;
   margin-top: 5%;
   margin-bottom: 3%;
+  margin-left: auto;
+  margin-right: auto;
   width: 40%;
   height: auto;
 }
@@ -97,10 +111,10 @@ body {
   box-shadow: 0 0 5px 2px #c4c4c4;
 }
 .header__logo--home {
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 5%;
   margin-bottom: 3%;
+  margin-left: auto;
+  margin-right: auto;
   width: 40%;
   height: auto;
 }

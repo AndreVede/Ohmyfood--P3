@@ -12,8 +12,6 @@
         box-shadow: 0 0 5px 2px darken($color-grey-primary, 15%);
     }
     &__logo--home {
-        margin-left: auto;
-        margin-right: auto;
         @include logo-header;        
     }
 }
