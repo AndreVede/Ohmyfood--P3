@@ -168,8 +168,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  gap: 15px;
-  padding: 45px 15px 50px 15px;
+  gap: 30px;
+  padding: 45px 20px 70px 15px;
 }
 .explanation__title {
   color: black;
@@ -179,24 +179,50 @@ body {
   margin: 0;
 }
 .explanation__card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
   background: #F7F7F7;
+  padding: 30px 10px 25px 30px;
+  border-radius: 25px;
+  margin-left: 15px;
+  box-shadow: 0px 4px 8px 0px #e2e2e2;
 }
 .explanation__card__number {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   color: white;
   font-family: Roboto;
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
   background: #9356DC;
+  border-radius: 50%;
+  height: 22px;
+  width: 25px;
+  padding-bottom: 3px;
+  position: absolute;
+  left: 20px;
+  margin-top: -2px;
 }
 .explanation__card__icone {
-  font-size: 15px;
+  font-size: 20px;
   color: #686868;
 }
 .explanation__card__text {
   color: black;
   font-family: Roboto;
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 17px;
+}
+.explanation__card:hover {
+  background: #f4eefc;
+}
+.explanation__card:hover .explanation__card__icone {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */
