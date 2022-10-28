@@ -71,3 +71,6 @@
 @mixin shadow-3D($color) {
     box-shadow: 0px 4px 8px 0px $color;
 }
+@mixin shadow-3D-card {
+    box-shadow: 0px 4px 8px 0px darken($color-grey-primary, 3%);
+}

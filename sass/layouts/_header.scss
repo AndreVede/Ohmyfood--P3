@@ -1,0 +1,39 @@
+.header {
+    @include header-properties;
+    flex-direction: row;
+    color: $color-grey-dark;
+    
+    &__icon-back {
+        z-index: 1;
+        font-size: large;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        position: absolute;
+        color: $color-grey-dark;
+        text-decoration: none;
+
+        left: 7%;
+        top: 3%;
+    }
+    &__logo {
+        z-index: 2;
+        @include logo-header;
+    }
+    
+    &__container--home {
+        width: 100%;
+        background: $color-grey-primary;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &--home {
+        z-index: 1;
+        @include header-properties;
+        box-shadow: 0 0 5px 2px darken($color-grey-primary, 15%);
+    }
+    &__logo--home {
+        @include logo-header;
+    }
+}

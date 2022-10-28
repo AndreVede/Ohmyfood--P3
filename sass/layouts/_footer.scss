@@ -1,0 +1,42 @@
+.footer {
+    background: $color-grey-dark;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+
+    &__title {
+        @include font-title;
+        font-size: 1em;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+    &__list-link {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        &__element {
+            @include font-footer;
+            a {
+                text-decoration: none;
+                color: white;
+
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+                gap: 15px;
+            }
+            &--partnair {
+                a {
+                    gap: 9px;
+                }
+            }
+        }
+    }
+}

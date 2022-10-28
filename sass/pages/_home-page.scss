@@ -1,20 +1,3 @@
-.header {
-    &__container--home {
-        width: 100%;
-        background: $color-grey-primary;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;        
-    }
-    &--home {
-        z-index: 1;
-        @include header-properties;
-        box-shadow: 0 0 5px 2px darken($color-grey-primary, 15%);
-    }
-    &__logo--home {
-        @include logo-header;        
-    }
-}
 .discover-restaurant {
     padding: 30px 30px 50px 30px;
     background: $color-grey-secondary;
@@ -37,19 +20,7 @@
         text-align: center;
     }
     &__button {
-        margin: 0;
         margin-top: 15px;
-        @include font-medium(15px);
-        color: white;
-        padding: 16px 20px 16px 20px;
-        border-radius: 28px;
-
-        background: $color-primary;
-        border: none;
-        @include shadow-3D(darken($color-grey-primary, 15%));
-        &:active {
-            box-shadow: 0px 0px 0px 0px;
-        }
     }
 }
 .explanation {
@@ -81,7 +52,7 @@
 
         margin-left: 15px;
 
-        @include shadow-3D(darken($color-grey-primary, 3%));
+        @include shadow-3D-card;
 
         &__number {
             display: flex;
@@ -118,4 +89,68 @@
             }
         }
     }
+}
+
+.restaurants {
+    background: $color-grey-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: 45px 15px 70px 15px;
+
+    &__title {
+        @include font-title-section;
+    }
+    &__link {
+        text-decoration: none;
+        color: black;
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+    
+            background: white;
+    
+            @include shadow-3D-card;
+    
+            $borderRadius: 15px;
+            border-radius: $borderRadius;
+    
+            &__img {
+                border-radius: $borderRadius $borderRadius 0 0;
+                object-fit: cover;
+                height: 200px;
+                width: 100%;
+            }
+            &__new {
+                position: absolute;
+                left: 73%;
+                margin-top: 4%;
+
+                padding: 6px 12px 6px 12px;
+                border-radius: 2px;
+
+                background: $color-tertiary;
+                color: darken($color-tertiary, 40%);
+                @include font-medium(13px);
+            }
+            &__content {
+                display: flex;
+                flex-direction: column;
+
+                &__text {
+                    display: flex;
+                    flex-direction: column;
+
+                    &__title {
+                        @include font-bold(18px);
+                    }
+                    &__name {
+                        @include font-light(18px);
+                    }
+                }
+            }
+        }
+    }    
 }

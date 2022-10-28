@@ -1,0 +1,15 @@
+.button-primary {
+    margin: 0;
+    cursor: pointer;
+    @include font-medium(15px);
+    color: white;
+    padding: 16px 20px 16px 20px;
+    border-radius: 28px;
+
+    background: $color-primary;
+    border: none;
+    @include shadow-3D(darken($color-grey-primary, 15%));
+    &:active {
+        box-shadow: 0px 0px 0px 0px;
+    }
+}
