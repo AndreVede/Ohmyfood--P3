@@ -10,26 +10,55 @@
     }
 };
 
+// weight font
+@mixin font-bold($size) {
+    font-family: Roboto;
+    font-weight: map-get($map: $roboto, $key: bold);
+    font-size: $size;
+};
+@mixin font-medium($size) {
+    font-family: Roboto;
+    font-weight: map-get($map: $roboto, $key: medium);
+    font-size: $size;
+};
+@mixin font-regular($size) {
+    font-family: Roboto;
+    font-weight: map-get($map: $roboto, $key: regular);
+    font-size: $size;
+};
+@mixin font-light($size) {
+    font-family: Roboto;
+    font-weight: map-get($map: $roboto, $key: light);
+    font-size: $size;
+};
+
+//Style fonts
 @mixin font-title {
     font-family: Shrikhand;
     font-weight: 400;
-}
+};
 @mixin font-location {
-    font-family: Roboto;
-    font-weight: 500;
-    font-size: 15px;
-}
+    @include font-medium(15px);
+};
 @mixin font-footer {
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 15px;
-}
+    @include font-regular(15px);
+};
+
+@mixin font-title-section {
+    color: black;
+    @include font-bold(23px);
+    margin: 0;
+};
+
+@mixin font-text($size) {
+    @include font-light($size);
+};
 
 @mixin header-properties {
     display: flex;
     width: 100%;
     background: white;
-}
+};
 @mixin logo-header {
     margin-top: 5%;
     margin-bottom: 3%;
@@ -37,4 +66,8 @@
     margin-right: auto;
     width: 40%;
     height: auto;
+};
+
+@mixin shadow-3D($color) {
+    box-shadow: 0px 4px 8px 0px $color;
 }

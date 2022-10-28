@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 body {
   margin: 0;
   width: 100%;
@@ -117,6 +116,87 @@ body {
   margin-right: auto;
   width: 40%;
   height: auto;
+}
+
+.discover-restaurant {
+  padding: 30px 30px 50px 30px;
+  background: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 12px;
+}
+.discover-restaurant__title {
+  color: black;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 23px;
+  margin: 0;
+  text-align: center;
+  padding: 0 40px 0 40px;
+}
+.discover-restaurant__text {
+  margin: 0;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 17px;
+  color: #353535;
+  text-align: center;
+}
+.discover-restaurant__button {
+  margin: 0;
+  margin-top: 15px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 15px;
+  color: white;
+  padding: 16px 20px 16px 20px;
+  border-radius: 28px;
+  background: #9356DC;
+  border: none;
+  box-shadow: 0px 4px 8px 0px #c4c4c4;
+}
+.discover-restaurant__button:active {
+  box-shadow: 0px 0px 0px 0px;
+}
+
+.explanation {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 15px;
+  padding: 45px 15px 50px 15px;
+}
+.explanation__title {
+  color: black;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 23px;
+  margin: 0;
+}
+.explanation__card {
+  background: #F7F7F7;
+}
+.explanation__card__number {
+  color: white;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 15px;
+  background: #9356DC;
+}
+.explanation__card__icone {
+  font-size: 15px;
+  color: #686868;
+}
+.explanation__card__text {
+  color: black;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

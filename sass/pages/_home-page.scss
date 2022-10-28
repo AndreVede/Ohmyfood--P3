@@ -15,3 +15,75 @@
         @include logo-header;        
     }
 }
+.discover-restaurant {
+    padding: 30px 30px 50px 30px;
+    background: $color-grey-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 12px;
+
+    &__title {
+        @include font-title-section;
+        text-align: center;
+        padding: 0 40px 0 40px;
+    }
+    &__text {
+        margin: 0;
+        @include font-text(17px);
+        color: $color-grey-dark;
+        text-align: center;
+    }
+    &__button {
+        margin: 0;
+        margin-top: 15px;
+        @include font-medium(15px);
+        color: white;
+        padding: 16px 20px 16px 20px;
+        border-radius: 28px;
+
+        background: $color-primary;
+        border: none;
+        @include shadow-3D(darken($color-grey-primary, 15%));
+        &:active {
+            box-shadow: 0px 0px 0px 0px;
+        }
+    }
+}
+.explanation {
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 15px;
+
+    padding: 45px 15px 50px 15px;
+
+    &__title {
+        @include font-title-section;
+    }
+
+    &__card {
+        background: $color-grey-secondary;
+        
+        $size: 15px;
+
+        &__number {
+            color: white;
+            @include font-regular($size);
+            background: $color-primary;
+        }
+        &__icone {
+            font-size: $size;
+            color: lighten($color: $color-grey-dark, $amount: 20%);
+        }
+        &__text {
+            color: black;
+            @include font-bold($size);
+        }
+    }
+}
