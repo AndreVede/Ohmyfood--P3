@@ -75,7 +75,7 @@
     box-shadow: 0px 4px 8px 0px darken($color-grey-primary, 3%);
 };
 
-@mixin peudo-elem {
+@mixin pseudo-elem {
     content: "";
     position: absolute;
     top: 0;

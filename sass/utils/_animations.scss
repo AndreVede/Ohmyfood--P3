@@ -8,19 +8,21 @@
     50% {
         stroke-dashoffset: 3100;
         fill: transparent;
+        stroke: $color-secondary;
         transform: scale(1);
     }
     65% {
         fill: $color-grey-secondary;
+        fill: transparent;
+        stroke: transparent;
         transform: scale(1.1);
     }
     75% {
         transform: scale(1);
-        stroke: $color-secondary;
+        stroke: transparent;
     }
     80%{
         stroke-dashoffset: 3100;
-        fill: $color-secondary;
         stroke: transparent;
         opacity: 1;
     }
@@ -34,6 +36,23 @@
         stroke-dashoffset: 3100;
         fill: url(#gradient-heart);
         stroke: transparent;
+        opacity: 1;
+    }
+}
+@keyframes backgroud-heart {
+    20% {
+        opacity: 0;
+    }
+    50% {
+        scale: 1;
+    }
+    65% {
+        scale: 1.1;
+    }
+    75% {
+        scale: 1;
+    }
+    85%, 100% {
         opacity: 1;
     }
 }

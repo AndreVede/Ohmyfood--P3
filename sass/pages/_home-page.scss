@@ -169,20 +169,31 @@
 
                     &__icone {
                         overflow: visible;
-                        width: 25px;
-
-                        &:hover {
-                            & > path {
-                                animation: stroke-animation 2s ease-in-out forwards;
+                        width: 25px;                        
+                        &--main {
+                            z-index: 2;
+                            &:hover {
+                                & > path {
+                                    animation: stroke-animation 2s ease-in-out forwards;
+                                }
+                                & ~ .restaurants__link__card__content__heart__icone--background {
+                                    animation: backgroud-heart 2s ease-in-out backwards;
+                                }
                             }
                         }
-
+                        &--background {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            z-index: 1;
+                            stroke: none;
+                            fill: url(#gradient-heart);
+                            opacity: 0;
+                        }
                         path {
                             stroke-dashoffset: 0;
                             stroke-dasharray: 1550;
                             transform-origin: center;
-
-                            
                         }
                     }
                 }
