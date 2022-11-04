@@ -13,7 +13,7 @@ body {
   color: white;
   padding: 16px 20px 16px 20px;
   border-radius: 28px;
-  background: #9356DC;
+  background: linear-gradient(175deg, #FF79DA, 40%, #9356DC);
   border: none;
   box-shadow: 0px 4px 8px 0px #c4c4c4;
 }
@@ -278,7 +278,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  padding: 15px 20px 15px 10px;
+  padding: 15px 22px 15px 10px;
 }
 .restaurants__link__card__content__text {
   display: flex;
@@ -297,18 +297,53 @@ body {
   font-size: 18px;
   margin: 0;
 }
+.restaurants__link__card__content__heart {
+  display: flex;
+  justify-content: center;
+  fill: transparent;
+  stroke: #353535;
+  stroke-width: 20;
+  cursor: pointer;
+  position: relative;
+  /* &__icone {
+      font-size: 1.8em;
+      &--void {
+          color: $color-grey-dark;
+      }
+      &--full {
+          opacity: 0;
+          color: $color-primary;
+          transform-origin: center bottom;
+          transform: scale(0, 0);
+          transition: transform 400ms opacity 400ms;
+          &:hover {
+              opacity: 1;
+              transform: scale(1, 1);
+          }
+      }
+  } */
+}
 .restaurants__link__card__content__heart__icone {
-  font-size: 1.8em;
+  overflow: visible;
+  width: 25px;
 }
-.restaurants__link__card__content__heart__icone--void {
-  color: #353535;
+.restaurants__link__card__content__heart__icone path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  transform-origin: center;
 }
-.restaurants__link__card__content__heart__icone--full {
-  opacity: 0;
-  color: #9356DC;
+.restaurants__link__card__content__heart__icone--main:hover > path {
+  animation: stroke-animation 2s ease-in-out forwards;
 }
-.restaurants__link__card__content__heart__icone--full:hover {
-  opacity: 1;
+.restaurants__link__card__content__heart__icone--main:hover ~ .restaurants__link__card__content__heart__icone--background > path {
+  animation: fade-animation 2s ease-in-out forwards;
+}
+.restaurants__link__card__content__heart__icone--background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
 }
 
 /*# sourceMappingURL=style.css.map */

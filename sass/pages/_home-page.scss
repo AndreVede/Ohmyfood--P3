@@ -141,7 +141,7 @@
                 justify-content: space-between;
                 align-items: center;
                 flex-direction: row;
-                padding: 15px 20px 15px 10px;
+                padding: 15px 22px 15px 10px;
 
                 &__text {
                     display: flex;
@@ -158,7 +158,44 @@
                     }
                 }
                 &__heart {
+                    display: flex;
+                    justify-content: center;
+
+                    fill: transparent;
+                    stroke: $color-grey-dark;
+                    stroke-width: 20;
+                    cursor: pointer;
+                    position: relative;
+
                     &__icone {
+                        overflow: visible;
+                        width: 25px;
+                        path {
+                            stroke-dashoffset: 0;
+                            stroke-dasharray: 1550;
+                            transform-origin: center;
+                        }
+                        &--main {
+                            &:hover {
+                                & > path {
+                                    animation: stroke-animation 2s ease-in-out forwards;
+                                }
+                                & ~ .restaurants__link__card__content__heart__icone--background > path {
+                                    animation: fade-animation 2s ease-in-out forwards;
+                                }
+                            }
+                        }
+                        &--background {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            z-index: -1;
+                            stroke: none;
+                        }
+                    }
+                    
+
+                    /* &__icone {
                         font-size: 1.8em;
                         &--void {
                             color: $color-grey-dark;
@@ -166,11 +203,15 @@
                         &--full {
                             opacity: 0;
                             color: $color-primary;
+                            transform-origin: center bottom;
+                            transform: scale(0, 0);
+                            transition: transform 400ms opacity 400ms;
                             &:hover {
                                 opacity: 1;
+                                transform: scale(1, 1);
                             }
                         }
-                    }
+                    } */
                 }
             }
         }

@@ -6,7 +6,7 @@
     padding: 16px 20px 16px 20px;
     border-radius: 28px;
 
-    background: $color-primary;
+    background: linear-gradient(175deg, $color-secondary, 40%, $color-primary);
     border: none;
     @include shadow-3D(darken($color-grey-primary, 15%));
     &:active {
