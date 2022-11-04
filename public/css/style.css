@@ -234,6 +234,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 20px;
   padding: 45px 15px 70px 15px;
 }
 .restaurants__title {
@@ -274,21 +275,40 @@ body {
 }
 .restaurants__link__card__content {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 15px 20px 15px 10px;
 }
 .restaurants__link__card__content__text {
   display: flex;
   flex-direction: column;
+  gap: 3px;
 }
 .restaurants__link__card__content__text__title {
   font-family: Roboto;
   font-weight: 700;
   font-size: 18px;
+  margin: 0;
 }
 .restaurants__link__card__content__text__name {
   font-family: Roboto;
   font-weight: 300;
   font-size: 18px;
+  margin: 0;
+}
+.restaurants__link__card__content__heart__icone {
+  font-size: 1.8em;
+}
+.restaurants__link__card__content__heart__icone--void {
+  color: #353535;
+}
+.restaurants__link__card__content__heart__icone--full {
+  opacity: 0;
+  color: #9356DC;
+}
+.restaurants__link__card__content__heart__icone--full:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

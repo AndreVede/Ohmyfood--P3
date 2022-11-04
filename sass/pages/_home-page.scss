@@ -96,6 +96,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 20px;
 
     padding: 45px 15px 70px 15px;
 
@@ -137,17 +138,38 @@
             }
             &__content {
                 display: flex;
-                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                padding: 15px 20px 15px 10px;
 
                 &__text {
                     display: flex;
                     flex-direction: column;
+                    gap: 3px;
 
                     &__title {
                         @include font-bold(18px);
+                        margin: 0;
                     }
                     &__name {
                         @include font-light(18px);
+                        margin: 0;
+                    }
+                }
+                &__heart {
+                    &__icone {
+                        font-size: 1.8em;
+                        &--void {
+                            color: $color-grey-dark;
+                        }
+                        &--full {
+                            opacity: 0;
+                            color: $color-primary;
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
                     }
                 }
             }
