@@ -70,10 +70,10 @@
 
 @mixin shadow-3D($color) {
     box-shadow: 0px 4px 8px 0px $color;
-}
+};
 @mixin shadow-3D-card {
     box-shadow: 0px 4px 8px 0px darken($color-grey-primary, 3%);
-}
+};
 
 @mixin peudo-elem {
     content: "";
@@ -82,4 +82,4 @@
     right: 0;
     bottom: 0;
     left: 0;
-}
+};

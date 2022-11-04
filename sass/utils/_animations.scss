@@ -1,0 +1,39 @@
+@keyframes stroke-animation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    20% {
+        stroke-dashoffset: 1550;
+    }
+    50% {
+        stroke-dashoffset: 3100;
+        fill: transparent;
+        transform: scale(1);
+    }
+    65% {
+        fill: $color-grey-secondary;
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(1);
+        stroke: $color-secondary;
+    }
+    80%{
+        stroke-dashoffset: 3100;
+        fill: $color-secondary;
+        stroke: transparent;
+        opacity: 1;
+    }
+    85%{
+        stroke-dashoffset: 3100;
+        fill: url(#gradient-heart);
+        stroke: transparent;
+        opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 3100;
+        fill: url(#gradient-heart);
+        stroke: transparent;
+        opacity: 1;
+    }
+}
