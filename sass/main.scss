@@ -1,11 +1,13 @@
 @import './utils/variables';
 @import './utils/functions';
 @import './utils/mixins';
-@import './utils/animations';
 
 @import './base/base';
 
+@import './utils/animations';
+
 @import './components/buttons';
+@import './components/heart-favorite';
 
 @import './layouts/header';
 @import './layouts/footer';

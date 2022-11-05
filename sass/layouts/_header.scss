@@ -29,6 +29,8 @@
         justify-content: center;
     }
     &--home {
+        // ajout de l'animation page d'accueil
+        // animation: spin-loading 3s ease-in-out backwards;
         z-index: 1;
         @include header-properties;
         box-shadow: 0 0 5px 2px darken($color-grey-primary, 15%);

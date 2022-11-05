@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+body {
+  margin: 0;
+  width: 100%;
+}
+
 @keyframes stroke-animation {
   0% {
     stroke-dashoffset: 0;
@@ -57,11 +62,6 @@
     opacity: 1;
   }
 }
-body {
-  margin: 0;
-  width: 100%;
-}
-
 .button-primary {
   margin: 0;
   cursor: pointer;
@@ -109,6 +109,43 @@ body {
 }
 .button-primary:hover:active {
   box-shadow: 0px 0px 0px 0px;
+}
+
+.heart-favorite {
+  display: flex;
+  justify-content: center;
+  fill: transparent;
+  stroke: #353535;
+  stroke-width: 20;
+  cursor: pointer;
+  position: relative;
+}
+.heart-favorite__icone {
+  overflow: visible;
+  width: 25px;
+}
+.heart-favorite__icone--main {
+  z-index: 2;
+}
+.heart-favorite__icone--main:hover > path {
+  animation: stroke-animation 2s ease-in-out forwards;
+}
+.heart-favorite__icone--main:hover ~ .heart-favorite__icone--background {
+  animation: backgroud-heart 2s ease-in-out backwards;
+}
+.heart-favorite__icone--background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  stroke: none;
+  fill: url(#gradient-heart);
+  opacity: 0;
+}
+.heart-favorite__icone path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  transform-origin: center;
 }
 
 .header {
@@ -386,42 +423,6 @@ body {
   font-weight: 300;
   font-size: 18px;
   margin: 0;
-}
-.restaurants__link__card__content__heart {
-  display: flex;
-  justify-content: center;
-  fill: transparent;
-  stroke: #353535;
-  stroke-width: 20;
-  cursor: pointer;
-  position: relative;
-}
-.restaurants__link__card__content__heart__icone {
-  overflow: visible;
-  width: 25px;
-}
-.restaurants__link__card__content__heart__icone--main {
-  z-index: 2;
-}
-.restaurants__link__card__content__heart__icone--main:hover > path {
-  animation: stroke-animation 2s ease-in-out forwards;
-}
-.restaurants__link__card__content__heart__icone--main:hover ~ .restaurants__link__card__content__heart__icone--background {
-  animation: backgroud-heart 2s ease-in-out backwards;
-}
-.restaurants__link__card__content__heart__icone--background {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  stroke: none;
-  fill: url(#gradient-heart);
-  opacity: 0;
-}
-.restaurants__link__card__content__heart__icone path {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 1550;
-  transform-origin: center;
 }
 
 /*# sourceMappingURL=style.css.map */
