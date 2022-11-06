@@ -198,7 +198,8 @@ body {
   height: 100%;
   width: 100%;
   z-index: 999;
-  background-color: rgba(109, 106, 106, 0.801);
+  background-color: rgba(109, 106, 106, 0.651);
+  backdrop-filter: blur(15px) saturate(180%);
   display: flex;
   flex-direction: column;
   justify-content: center;
