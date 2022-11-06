@@ -15,9 +15,12 @@
     }
     &__text {
         margin: 0;
-        @include font-text(17px);
+        @include font-light(17px);
         color: $color-grey-dark;
         text-align: center;
+        @include touch-pad-only {
+            font-size: 20px;
+        }
     }
     &__button {
         margin-top: 15px;
@@ -33,6 +36,10 @@
     gap: 30px;
 
     padding: 45px 20px 70px 15px;
+    @include touch-pad-only {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 
     &__title {
         @include font-title-section;
@@ -44,6 +51,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         gap: 15px;
+        position: relative;
 
         background: $color-grey-secondary;
 
@@ -70,16 +78,23 @@
             padding-bottom: 3px;
 
             position: absolute;
-            left: 20px;
+            left: -15px;
             margin-top: -2px;
         }
         &__icone {
             font-size: 20px;
             color: lighten($color: $color-grey-dark, $amount: 20%);
+
+            @include touch-pad-only {
+                font-size: 22px;
+            }
         }
         &__text {
             color: black;
             @include font-medium(17px);
+            @include touch-pad-only {
+                font-size: 19px;
+            }
         }
 
         &:hover {
@@ -100,6 +115,12 @@
 
     padding: 45px 15px 70px 15px;
 
+    @include touch-pad-only {
+        gap: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     &__title {
         @include font-title-section;
     }
@@ -110,14 +131,20 @@
         &__card {
             display: flex;
             flex-direction: column;
-    
+            position: relative;
+
             background: white;
-    
+
             @include shadow-3D-card;
-    
+
             $borderRadius: 15px;
             border-radius: $borderRadius;
-    
+
+            @include touch-pad-only {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
             &__img {
                 border-radius: $borderRadius $borderRadius 0 0;
                 object-fit: cover;
@@ -135,6 +162,10 @@
                 background: $color-tertiary;
                 color: darken($color-tertiary, 40%);
                 @include font-medium(13px);
+                @include touch-pad-only {
+                    left: 85%;
+                    margin-top: 2%;
+                }
             }
             &__content {
                 display: flex;
@@ -151,10 +182,16 @@
                     &__title {
                         @include font-bold(18px);
                         margin: 0;
+                        @include touch-pad-only {
+                            font-size: 23px;
+                        }
                     }
                     &__name {
                         @include font-light(18px);
                         margin: 0;
+                        @include touch-pad-only {
+                            font-size: 20px;
+                        }
                     }
                 }
             }

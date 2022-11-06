@@ -12,6 +12,9 @@
         font-size: 1em;
         margin-bottom: 15px;
         display: inline-block;
+        @include touch-pad-only {
+            font-size: 1.3em;
+        }
     }
     &__list-link {
         margin: 0;
@@ -21,6 +24,12 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
+
+        @include touch-pad-only {
+            flex-wrap: wrap;
+            height: 50px;
+        }
+
         &__element {
             @include font-footer;
             a {
