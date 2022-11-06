@@ -61,7 +61,7 @@
 
     }
     100% {
-        z-index: -999;
+        visibility: hidden;
     }
 }
 @keyframes lds-ellipsis1 {
