@@ -91,6 +91,22 @@ body {
     transform: translate(24px, 0);
   }
 }
+@keyframes fork-anim {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(-1turn);
+  }
+}
+@keyframes knife-anim {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
 .button-primary {
   margin: 0;
   cursor: pointer;
@@ -184,18 +200,57 @@ body {
   z-index: 999;
   background-color: rgba(109, 106, 106, 0.801);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
   animation: loading 3s ease-in-out forwards;
 }
-.loading__spinner {
+.loading__clock {
+  position: relative;
+  width: 10rem;
+}
+.loading__clock #clock-background {
+  fill: #F7F7F7;
+}
+.loading__clock #fork {
+  display: inline;
+  fill: #9356DC;
+  stroke-width: 0.0414658;
+  animation: fork-anim 2s cubic-bezier(0.18, 0.46, 0.69, 0.64) infinite;
+  transform-origin: center;
+}
+.loading__clock #knife {
+  fill: #FF79DA;
+  stroke-width: 6.40406;
+  animation: knife-anim 1s cubic-bezier(0.18, 0.3, 0.84, 0.95) infinite;
+  transform-origin: center;
+}
+.loading__clock #clock-center {
+  fill: #F7F7F7;
+  stroke-width: 0.907846;
+}
+.loading__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 3px;
+}
+.loading__text__content {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 25px;
+  color: #99E2D0;
+}
+.loading__text__spinner {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
 }
-.loading__spinner div {
+.loading__text__spinner div {
   position: absolute;
   top: 33px;
   width: 13px;
@@ -204,19 +259,19 @@ body {
   background: #99E2D0;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
-.loading__spinner div:nth-child(1) {
+.loading__text__spinner div:nth-child(1) {
   left: 8px;
   animation: lds-ellipsis1 0.6s infinite;
 }
-.loading__spinner div:nth-child(2) {
+.loading__text__spinner div:nth-child(2) {
   left: 8px;
   animation: lds-ellipsis2 0.6s infinite;
 }
-.loading__spinner div:nth-child(3) {
+.loading__text__spinner div:nth-child(3) {
   left: 32px;
   animation: lds-ellipsis2 0.6s infinite;
 }
-.loading__spinner div:nth-child(4) {
+.loading__text__spinner div:nth-child(4) {
   left: 56px;
   animation: lds-ellipsis3 0.6s infinite;
 }

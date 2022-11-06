@@ -6,41 +6,80 @@
     background-color: rgba(109, 106, 106, 0.801);
     
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
     
     // ajout de l'animation page d'accueil
     animation: loading 3s ease-in-out forwards;
-    &__spinner {
-        display: inline-block;
+
+    &__clock {
         position: relative;
-        width: 80px;
-        height: 80px;
-        & div {
-            position: absolute;
-            top: 33px;
-            width: 13px;
-            height: 13px;
-            border-radius: 50%;
-            background: $color-tertiary;
-            animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        width: 10rem;
+        #clock-background {
+            fill: $color-grey-secondary;
         }
-        & div:nth-child(1) {
-            left: 8px;
-            animation: lds-ellipsis1 0.6s infinite;
+        #fork {
+            display:inline;
+            fill:$color-primary;
+            stroke-width:0.0414658;
+            animation: fork-anim 2s cubic-bezier(.18,.46,.69,.64) infinite;
+            transform-origin: center;
         }
-        & div:nth-child(2) {
-            left: 8px;
-            animation: lds-ellipsis2 0.6s infinite;
+        #knife {
+            fill: $color-secondary;
+            stroke-width:6.40406;
+            animation: knife-anim 1s cubic-bezier(.18,.3,.84,.95) infinite;
+            transform-origin: center;
         }
-        & div:nth-child(3) {
-            left: 32px;
-            animation: lds-ellipsis2 0.6s infinite;
+        #clock-center {
+            fill: $color-grey-secondary;
+            stroke-width:0.907846;
         }
-        & div:nth-child(4) {
-            left: 56px;
-            animation: lds-ellipsis3 0.6s infinite;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 3px;
+        &__content {
+            @include font-medium(25px);
+            color: $color-tertiary;
+        }
+        &__spinner {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+            & div {
+                position: absolute;
+                top: 33px;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background: $color-tertiary;
+                animation-timing-function: cubic-bezier(0, 1, 1, 0);
+            }
+            & div:nth-child(1) {
+                left: 8px;
+                animation: lds-ellipsis1 0.6s infinite;
+            }
+            & div:nth-child(2) {
+                left: 8px;
+                animation: lds-ellipsis2 0.6s infinite;
+            }
+            & div:nth-child(3) {
+                left: 32px;
+                animation: lds-ellipsis2 0.6s infinite;
+            }
+            & div:nth-child(4) {
+                left: 56px;
+                animation: lds-ellipsis3 0.6s infinite;
+            }
         }
     }
 }

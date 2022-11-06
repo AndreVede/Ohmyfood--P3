@@ -88,3 +88,19 @@
       transform: translate(24px, 0);
     }
 }
+@keyframes fork-anim {
+    0% {
+        transform: rotate(0turn);
+    }
+    100% {
+        transform: rotate(-1turn);
+    }
+}
+@keyframes knife-anim {
+    0% {
+        transform: rotate(0turn);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
