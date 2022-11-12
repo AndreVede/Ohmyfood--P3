@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 body {
-  margin: 0;
+  margin: auto;
   width: 100%;
   max-width: 1440px;
   min-width: 350px;
@@ -204,6 +204,7 @@ body {
   position: fixed;
   height: 100%;
   width: 100%;
+  left: 0;
   z-index: 999;
   background-color: rgba(109, 106, 106, 0.651);
   backdrop-filter: blur(15px) saturate(180%);
