@@ -1,3 +1,4 @@
+/* heart-favorite */
 @keyframes stroke-animation {
     0% {
         stroke-dashoffset: 0;
@@ -56,6 +57,7 @@
         opacity: 1;
     }
 }
+/* loading */
 @keyframes loading {
     0% {
 
@@ -102,5 +104,15 @@
     }
     100% {
         transform: rotate(1turn);
+    }
+}
+
+/* card menu */
+@keyframes check-food-icone {
+    from {
+        transform: rotate(-1.5turn);
+    }
+    to {
+        transform: rotate(0);
     }
 }
