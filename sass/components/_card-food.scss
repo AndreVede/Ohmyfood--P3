@@ -1,31 +1,67 @@
 .card-food {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 5px;
-
-    padding: 12px 24px 12px 10px;
     background: #fff;
     border-radius: 16px;
     @include shadow-3D-card;
 
-    &__title {
-        @include font-medium(18px);
-        margin: 0;
-        color: black;
-    }
-    &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+
+    &__container {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        color: $color-grey-dark;
-        
-        $fontSize: 15px;
-        &__describe {
-            @include font-light($fontSize);
+        flex-direction: column;
+        align-items: stretch;
+        flex-grow: 4;
+        gap: 5px;
+
+        padding: 12px 24px 12px 10px;
+        &__title {
+            @include font-medium(18px);
+            margin: 0;
+            color: black;
         }
-        &__price {
-            @include font-bold($fontSize);
+        &__content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            color: $color-grey-dark;
+            
+            $fontSize: 15px;
+            &__describe {
+                min-width: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                @include font-light($fontSize);
+                width: 212px;
+                height: 18px;
+            }
+            &__price {
+                @include font-bold($fontSize);
+            }
+        }
+    }
+    &__check {
+        border-radius: 0 16px 16px 0;
+        background: $color-tertiary;
+        width: 55px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__round {
+            background: white;
+            border-radius: 50%;
+            width: 21px;
+            height: 21px;
+            display: flex;
+            &__icone {
+                margin: auto;
+                color: $color-tertiary;
+            }
         }
     }
 }
