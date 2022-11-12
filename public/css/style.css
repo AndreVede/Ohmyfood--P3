@@ -328,6 +328,7 @@ body {
   padding: 12px 24px 12px 10px;
 }
 .card-food__container__title {
+  transition: width 1s ease-out;
   font-family: Roboto;
   font-weight: 500;
   font-size: 18px;
@@ -343,20 +344,19 @@ body {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
-  gap: 5px;
-  flex-shrink: 1;
+  gap: 8px;
+  flex-shrink: 2;
   color: #353535;
 }
 .card-food__container__content__describe {
-  min-width: 0;
+  transition: width 1s ease-out;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex-shrink: 2;
+  flex: 0 2 100%;
   font-family: Roboto;
   font-weight: 300;
   font-size: 15px;
-  /* width: 212px; */
 }
 .card-food__container__content__price {
   font-family: Roboto;
@@ -364,6 +364,7 @@ body {
   font-size: 15px;
 }
 .card-food__check {
+  flex-shrink: 0;
   border-radius: 0 16px 16px 0;
   background: #99E2D0;
   /* width: 55px; quand affiché */
@@ -379,12 +380,20 @@ body {
   border-radius: 50%;
   width: 22px;
   height: 22px;
+  min-width: 22px;
+  min-height: 22px;
   display: flex;
 }
 .card-food__check__round__icone {
   font-size: 16px;
   margin: auto;
   color: #99E2D0;
+}
+.card-food:hover .card-food__container__title {
+  width: 14em;
+}
+.card-food:hover .card-food__container__content__describe {
+  width: 2em;
 }
 .card-food:hover .card-food__check {
   width: 55px;
