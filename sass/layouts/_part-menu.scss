@@ -29,5 +29,11 @@
         justify-content: center;
         align-items: stretch;
         gap: 12px;
+        /* boucle for avec animation: apparition-card 2s ease-out both; */
+        @for $i from 1 through 4 {
+            & > :nth-child(#{$i}) {
+                animation-delay: #{$i * 200}ms;
+            }
+        }
     }
 }

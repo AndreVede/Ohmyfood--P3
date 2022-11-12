@@ -113,6 +113,16 @@ body {
   }
 }
 /* card menu */
+@keyframes apparition-card {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes check-food-icone {
   from {
     transform: rotate(-1.5turn);
@@ -298,6 +308,7 @@ body {
 }
 
 .card-food {
+  animation: apparition-card 0.6s ease-out both;
   overflow: hidden;
   background: #fff;
   border-radius: 16px;
@@ -311,7 +322,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  flex-grow: 4;
+  flex-grow: 1;
+  flex-shrink: 1;
   gap: 5px;
   padding: 12px 24px 12px 10px;
 }
@@ -321,12 +333,18 @@ body {
   font-size: 18px;
   margin: 0;
   color: black;
+  flex-shrink: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card-food__container__content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
+  gap: 5px;
+  flex-shrink: 1;
   color: #353535;
 }
 .card-food__container__content__describe {
@@ -334,11 +352,11 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex-shrink: 2;
   font-family: Roboto;
   font-weight: 300;
   font-size: 15px;
-  width: 212px;
-  height: 18px;
+  /* width: 212px; */
 }
 .card-food__container__content__price {
   font-family: Roboto;
@@ -563,6 +581,19 @@ body {
   justify-content: center;
   align-items: stretch;
   gap: 12px;
+  /* boucle for avec animation: apparition-card 2s ease-out both; */
+}
+.part-menu__list > :nth-child(1) {
+  animation-delay: 200ms;
+}
+.part-menu__list > :nth-child(2) {
+  animation-delay: 400ms;
+}
+.part-menu__list > :nth-child(3) {
+  animation-delay: 600ms;
+}
+.part-menu__list > :nth-child(4) {
+  animation-delay: 800ms;
 }
 
 .card-menu {
@@ -596,6 +627,17 @@ body {
   font-weight: 400;
   font-size: 1.6em;
   margin-bottom: 27px;
+}
+.card-menu__content__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.card-menu__content__form__button {
+  width: 180px;
+  margin-bottom: 40px;
 }
 
 .discover-restaurant {
