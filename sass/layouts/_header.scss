@@ -2,19 +2,20 @@
     @include header-properties;
     flex-direction: row;
     color: $color-grey-dark;
+    position: relative;
 
     &__icon-back {
         z-index: 1;
-        font-size: large;
-        margin-top: auto;
-        margin-bottom: auto;
+        font-size: 20px;
+        /* width: 25%; */
+        height: auto;
 
         position: absolute;
         color: $color-grey-dark;
         text-decoration: none;
 
         left: 7%;
-        top: 3%;
+        bottom: 30%;
     }
     &__logo {
         z-index: 2;

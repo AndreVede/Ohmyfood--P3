@@ -26,9 +26,7 @@
             color: black;
 
             flex-shrink: 1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            @include text-ellipsis;
         }
         &__content {
             display: flex;
@@ -42,9 +40,7 @@
             
             $fontSize: 15px;
             &__describe {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+                @include text-ellipsis;
                 flex: 0 2 100%;
 
                 @include font-light($fontSize);
