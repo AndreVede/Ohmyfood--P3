@@ -19,9 +19,8 @@
         gap: 5px;
 
         padding: 12px 24px 12px 10px;
+        min-width: 0;
         &__title {
-            transition: width 1s ease-out;
-
             @include font-medium(18px);
             margin: 0;
             color: black;
@@ -43,8 +42,6 @@
             
             $fontSize: 15px;
             &__describe {
-                transition: width 1s ease-out;
-
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -87,12 +84,6 @@
         }
     }
     &:hover {
-        .card-food__container__title {
-            width: 14em;
-        }
-        .card-food__container__content__describe {
-            width: 2em;
-        }
         & .card-food__check {
             width: 55px;
 
