@@ -3,6 +3,7 @@
     overflow: hidden;
     background: #fff;
     border-radius: 16px;
+    cursor: pointer;
     @include shadow-3D-card;
 
     display: flex;
