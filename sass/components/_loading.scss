@@ -3,6 +3,7 @@
     height: 100%;
     width: 100%;
     left: 0;
+    top: 0;
     z-index: 999;
     background-color: rgba(109, 106, 106, 0.651);
     backdrop-filter: blur(15px) saturate(180%);
@@ -18,7 +19,7 @@
 
     &__clock {
         position: relative;
-        width: 10rem;
+        width: 200px;
         #clock-background {
             fill: $color-grey-secondary;
         }

@@ -5,6 +5,9 @@
     @include touch-pad-only {
         font-size: 18px;
     }
+    @include desktop-only {
+        font-size: 20px;
+    }
     color: white;
     padding: 16px 20px 16px 20px;
     border-radius: 28px;
@@ -32,6 +35,7 @@
         z-index: -2;
     }
     &:hover {
+        transform: translate(0, 0);
         &::before {
             opacity: 0;
         }

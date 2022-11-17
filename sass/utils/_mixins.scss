@@ -43,12 +43,18 @@
     @include touch-pad-only {
         font-size: 18px;
     }
+    @include desktop-only{
+        font-size: 18px;
+    }
 };
 
 @mixin font-footer {
     @include font-regular(15px);
     @include touch-pad-only {
         font-size: 18px;
+    }
+    @include desktop-only {
+        font-size: 20px;
     }
 };
 
@@ -59,12 +65,16 @@
     @include touch-pad-only {
         font-size: 30px;
     }
+    @include desktop-only {
+        font-size: 30px;
+    }
 };
 
 @mixin header-properties {
     display: flex;
     width: 100%;
     background: white;
+    overflow: hidden;
 };
 @mixin logo-header {
     margin-top: 5%;
@@ -77,6 +87,11 @@
         margin-top: 3%;
         margin-bottom: 2%;
         width: 20%;
+    }
+    @include desktop-only {
+        margin-top: 2%;
+        margin-bottom: 1.5%;
+        width: 12%;
     }
 };
 

@@ -7,14 +7,25 @@
     padding-left: 20px;
     padding-bottom: 30px;
 
+    @include touch-pad-only {
+        padding-left: 30px;
+    }
+    @include desktop-only {
+        padding-left: 50px;
+        padding-bottom: 50px
+    }
     &__title {
         @include font-title;
-        font-size: 1em;
+        font-size: 20px;
         margin-bottom: 15px;
         display: inline-block;
         @include touch-pad-only {
-            font-size: 1.3em;
+            font-size: 26px;
         }
+        @include desktop-only {
+            font-size: 26px;
+        }
+
     }
     &__list-link {
         margin: 0;
@@ -28,6 +39,10 @@
         @include touch-pad-only {
             flex-wrap: wrap;
             height: 50px;
+        }
+        @include desktop-only {
+            flex-wrap: wrap;
+            height: 60px;
         }
 
         &__element {

@@ -21,6 +21,9 @@
         @include touch-pad-only {
             font-size: 20px;
         }
+        @include desktop-only {
+            font-size: 20px;
+        }
     }
     &__button {
         margin-top: 15px;
@@ -40,6 +43,9 @@
         padding-left: 30px;
         padding-right: 30px;
     }
+    @include desktop-only {
+        
+    }
 
     &__title {
         @include font-title-section;
@@ -52,6 +58,8 @@
         justify-content: flex-start;
         gap: 15px;
         position: relative;
+
+        cursor: pointer;
 
         background: $color-grey-secondary;
 
@@ -119,6 +127,9 @@
         gap: 25px;
         padding-left: 30px;
         padding-right: 30px;
+    }
+    @include desktop-only {
+        
     }
 
     &__title {

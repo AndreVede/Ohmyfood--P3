@@ -6,6 +6,9 @@
         object-fit: cover;
         width: 100%;
         margin: 0;
+        @include touch-pad-only {
+            height: 400px;
+        }
     }
     &__content {
         background: $color-grey-secondary;
@@ -35,9 +38,17 @@
             justify-content: center;
             gap: 20px;
 
+            @include touch-pad-only {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
             &__button {
                 width: 180px;
                 margin-bottom: 40px;
+                @include touch-pad-only {
+                    width: 230px;
+                }
             }
         }
     }

@@ -13,6 +13,10 @@
         margin-top: 2%;
         margin-bottom: 2%;
     }
+    @include desktop-only {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
 
     &__icone {
         margin: 0;
