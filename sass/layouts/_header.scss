@@ -16,6 +16,10 @@
 
         left: 7%;
         bottom: 30%;
+        @include desktop-only {
+            font-size: 25px;
+            left: 3%;
+        }
     }
     &__logo {
         z-index: 2;

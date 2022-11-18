@@ -44,13 +44,31 @@
         padding-right: 30px;
     }
     @include desktop-only {
+        position: relative;
         margin-left: 200px;
         margin-right: 200px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
 
         border-radius: 25px;
         background-color: $color-grey-primary;
+        @include shadow-3D(darken($color-grey-primary, 8%));
+
+        &::before {
+            @include pseudo-elem;
+            z-index: -1;
+            background: #fff;
+            width: auto;
+            height: auto;
+            
+            top: 0;
+            left: 0;
+            
+            margin-left: -200px;
+            margin-right: -200px;
+            margin-top: -25px;
+            margin-bottom: -50px;
+        }
     }
 
     &__title {

@@ -5,6 +5,7 @@ body {
   width: 100%;
   max-width: 1440px;
   min-width: 350px;
+  background: #ededed;
 }
 
 /* heart-favorite */
@@ -423,6 +424,12 @@ body {
   left: 7%;
   bottom: 30%;
 }
+@media all and (min-width: 992px) {
+  .header__icon-back {
+    font-size: 25px;
+    left: 3%;
+  }
+}
 .header__logo {
   z-index: 2;
   margin-top: 5%;
@@ -789,12 +796,32 @@ body {
 }
 @media all and (min-width: 992px) {
   .explanation {
+    position: relative;
     margin-left: 200px;
     margin-right: 200px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     border-radius: 25px;
     background-color: #EAEAEA;
+    box-shadow: 0px 4px 8px 0px #d6d6d6;
+  }
+  .explanation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #fff;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    margin-left: -200px;
+    margin-right: -200px;
+    margin-top: -25px;
+    margin-bottom: -50px;
   }
 }
 .explanation__title {
