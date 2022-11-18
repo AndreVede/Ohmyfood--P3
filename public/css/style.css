@@ -1025,8 +1025,9 @@ body {
 }
 .restaurants__link__card__new {
   position: absolute;
-  left: 73%;
-  margin-top: 4%;
+  right: 3%;
+  top: 4%;
+  width: min-content;
   padding: 6px 12px 6px 12px;
   border-radius: 2px;
   background: #99E2D0;
@@ -1037,8 +1038,7 @@ body {
 }
 @media all and (min-width: 700px) and (max-width: 991px) {
   .restaurants__link__card__new {
-    left: 85%;
-    margin-top: 2%;
+    right: 1.5%;
   }
 }
 .restaurants__link__card__content {

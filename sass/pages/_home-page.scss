@@ -210,8 +210,10 @@
             }
             &__new {
                 position: absolute;
-                left: 73%;
-                margin-top: 4%;
+                right: 3%;
+                top: 4%;
+
+                width: min-content;
 
                 padding: 6px 12px 6px 12px;
                 border-radius: 2px;
@@ -220,8 +222,7 @@
                 color: darken($color-tertiary, 40%);
                 @include font-medium(13px);
                 @include touch-pad-only {
-                    left: 85%;
-                    margin-top: 2%;
+                    right: 1.5%;
                 }
             }
             &__content {
