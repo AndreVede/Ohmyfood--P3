@@ -9,6 +9,9 @@
         @include touch-pad-only {
             height: 400px;
         }
+        @include desktop-only {
+            height: 450px;
+        }
     }
     &__content {
         background: $color-grey-secondary;
@@ -28,6 +31,9 @@
                 @include font-title;
                 font-size: 1.6em;
                 margin-bottom: 27px;
+                @include desktop-only {
+                    margin-left: 30px;
+                }
             }
         }
 
@@ -42,12 +48,21 @@
                 padding-left: 15px;
                 padding-right: 15px;
             }
+            @include desktop-only {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
 
             &__button {
                 width: 180px;
                 margin-bottom: 40px;
                 @include touch-pad-only {
                     width: 230px;
+                }
+                @include desktop-only {
+                    width: 100%;
+                    margin-left: 38%;
+                    margin-right: 38%;
                 }
             }
         }
