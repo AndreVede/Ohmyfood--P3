@@ -787,6 +787,16 @@ body {
     padding-right: 30px;
   }
 }
+@media all and (min-width: 992px) {
+  .explanation {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    background-color: #EAEAEA;
+  }
+}
 .explanation__title {
   color: black;
   font-family: Roboto;
@@ -836,6 +846,13 @@ body {
   left: -15px;
   margin-top: -2px;
 }
+@media all and (min-width: 992px) {
+  .explanation__card__number {
+    font-size: 18px;
+    height: 25px;
+    width: 28px;
+  }
+}
 .explanation__card__icone {
   font-size: 20px;
   color: #686868;
@@ -843,6 +860,11 @@ body {
 @media all and (min-width: 700px) and (max-width: 991px) {
   .explanation__card__icone {
     font-size: 22px;
+  }
+}
+@media all and (min-width: 992px) {
+  .explanation__card__icone {
+    font-size: 25px;
   }
 }
 .explanation__card__text {
@@ -854,6 +876,11 @@ body {
 @media all and (min-width: 700px) and (max-width: 991px) {
   .explanation__card__text {
     font-size: 19px;
+  }
+}
+@media all and (min-width: 992px) {
+  .explanation__card__text {
+    font-size: 22px;
   }
 }
 .explanation__card:hover {
@@ -878,6 +905,16 @@ body {
     padding-right: 30px;
   }
 }
+@media all and (min-width: 992px) {
+  .restaurants {
+    border-radius: 20px 20px 0 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .restaurants__title {
   color: black;
   font-family: Roboto;
@@ -893,6 +930,11 @@ body {
 @media all and (min-width: 992px) {
   .restaurants__title {
     font-size: 30px;
+  }
+}
+@media all and (min-width: 992px) {
+  .restaurants__title {
+    width: 100%;
   }
 }
 .restaurants__link {
@@ -911,6 +953,11 @@ body {
   .restaurants__link__card {
     margin-left: 20px;
     margin-right: 20px;
+  }
+}
+@media all and (min-width: 992px) {
+  .restaurants__link__card {
+    width: 300px;
   }
 }
 .restaurants__link__card__img {
@@ -958,6 +1005,11 @@ body {
 @media all and (min-width: 700px) and (max-width: 991px) {
   .restaurants__link__card__content__text__title {
     font-size: 23px;
+  }
+}
+@media all and (min-width: 992px) {
+  .restaurants__link__card__content__text__title {
+    font-size: 20px;
   }
 }
 .restaurants__link__card__content__text__name {
