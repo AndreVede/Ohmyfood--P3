@@ -13,22 +13,22 @@
 // weight font
 @mixin font-bold($size) {
     font-family: Roboto;
-    font-weight: map-get($map: $roboto, $key: bold);
+    font-weight: map-get($map: $font-weight, $key: bold);
     font-size: $size;
 };
 @mixin font-medium($size) {
     font-family: Roboto;
-    font-weight: map-get($map: $roboto, $key: medium);
+    font-weight: map-get($map: $font-weight, $key: medium);
     font-size: $size;
 };
 @mixin font-regular($size) {
     font-family: Roboto;
-    font-weight: map-get($map: $roboto, $key: regular);
+    font-weight: map-get($map: $font-weight, $key: regular);
     font-size: $size;
 };
 @mixin font-light($size) {
     font-family: Roboto;
-    font-weight: map-get($map: $roboto, $key: light);
+    font-weight: map-get($map: $font-weight, $key: light);
     font-size: $size;
 };
 
